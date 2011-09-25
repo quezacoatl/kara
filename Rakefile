@@ -17,10 +17,11 @@ Jeweler::Tasks.new do |gem|
   gem.name = "kara"
   gem.homepage = "http://github.com/quezacoatl/kara"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = "A Ruby shell."
+  gem.description = "A Ruby shell."
   gem.email = "yohan.lundahl@gmail.com"
   gem.authors = ["Johan Lundahl"]
+  gem.executables << 'kara'
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
