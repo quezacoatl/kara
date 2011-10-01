@@ -1,4 +1,5 @@
 require 'etc'
+require 'readline'
 require 'socket'
 
 require 'kara/cli'

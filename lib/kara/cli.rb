@@ -6,16 +6,17 @@ module Kara
     end
 
     def run
-      print prompt
-      STDIN.each_line do |line|
+      while line = Readline.readline(prompt)
         @evaluator.evaluate(line.strip)
-        print prompt
       end
     end
 
     def prompt
-      "#{Etc.getlogin}@#{Socket.gethostname}:#{Dir.pwd}$ "
+      "#{Etc.getlogin}@#{Socket.gethostname}:#{current_dir}$ "
     end
-    
+
+    def current_dir
+      Dir.pwd.gsub(/#{Etc.getpwuid.dir}/, '~')
+    end
   end
 end
